@@ -148,7 +148,7 @@ app.get("/hall-detalis", (req, res) => {
   }
 })
 
-//updating a new hall 
+//check room already booked or not
 app.put("/hall-details/:id", (req, res)=>{
   const {id} = req.params;
   const hall = hallData.find((hall)=>hall.id === id);
@@ -162,5 +162,6 @@ app.put("/hall-details/:id", (req, res)=>{
   hall.endTime = req.body.endTime;
   res.send(hall)
 })
+
 
 app.listen(9000, () => console.log("sever is running localhost:9000"))
