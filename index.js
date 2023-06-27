@@ -148,7 +148,7 @@ app.get("/hall-detalis", (req, res) => {
   }
 })
 
-//check room already booked or not
+//check rooms already booked or not
 app.put("/hall-details/:id", (req, res)=>{
   const {id} = req.params;
   const hall = hallData.find((hall)=>hall.id === id);
